@@ -1,42 +1,33 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 import type {Node} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import {} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
+import {ThemeProvider} from 'react-native-elements';
 
-function HomeScreen() {
-  return (
-    <SafeAreaView>
-      <ScrollView>
-        <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-          <Text>Home Screen</Text>
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
-}
+import * as Styles from './src/Includes/Styles';
+import Home from './src/Screens/Home';
 
 const Stack = createStackNavigator();
 
 const App: () => Node = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <ThemeProvider theme={Styles.Theme}>
+          <Stack.Navigator initialRouteName="Home">
+            <Stack.Screen
+              name="Home"
+              component={Home}
+              options={{headerShown: false}}
+            />
+          </Stack.Navigator>
+        </ThemeProvider>
+      </NavigationContainer>
+    </SafeAreaProvider>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default App;
