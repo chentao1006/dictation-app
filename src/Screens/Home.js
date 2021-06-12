@@ -33,7 +33,7 @@ const HomeScreen = ({route, navigation}) => {
           size: 20,
           color: 'white',
         }}
-        onPress={() => navigation.navigate('Contents')}
+        onPress={() => navigation.navigate('Photos')}
       />
       <Button
         title="拍照识别"
@@ -42,7 +42,7 @@ const HomeScreen = ({route, navigation}) => {
           size: 20,
           color: 'white',
         }}
-        onPress={() => navigation.navigate('Contents')}
+        onPress={() => navigation.navigate('Camera')}
       />
     </View>
   );

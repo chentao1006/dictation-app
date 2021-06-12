@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>en</string>
+	<string>zh_CN</string>
 	<key>CFBundleDisplayName</key>
 	<string>听写</string>
 	<key>CFBundleExecutable</key>
@@ -37,8 +37,10 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<key>NSCameraUsageDescription</key>
+	<string>使用相机来拍摄以识别待听写文字</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>读取并识别照片中的待听写文字</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>AntDesign.ttf</string>
