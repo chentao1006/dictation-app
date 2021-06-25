@@ -14,7 +14,6 @@ export const Common = {
 
 export const Theme = {
   Button: {
-    raised: true,
     containerStyle: {
       width: '100%',
       marginVertical: 10,
